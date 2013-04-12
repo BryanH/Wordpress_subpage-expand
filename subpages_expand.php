@@ -3,7 +3,7 @@
  * Plugin Name: Subpages as Expandible Links Shortcode
  * Plugin URI: http://hbjitney.com/subpages-expand.html
  * Description: Add [subpages_expand] to any page to embed all subpages as content-expandable links at that location.
- * Version: 1.09a
+ * Version: 1.10
  * Author: HBJitney, LLC
  * Author URI: http://hbjitney.com/
  * License: GPL3
@@ -35,6 +35,7 @@ if ( !class_exists('SupPagesExpand' ) ) {
 		 */
 		function __construct() {
 			add_action( 'wp_enqueue_scripts', array( $this, 'shortcode_enqueue' ), 10 );
+			add_action( 'admin_head', array( $this, 'add_button_to_editor' ), 10 );
 			add_shortcode('subpages_expand', array( $this, 'render_subs' ) );
 			add_filter( 'the_posts', array( $this, 'conditionally_add_scripts_and_styles' ) ); // the_posts gets triggered before wp_head
 		}
@@ -43,6 +44,15 @@ if ( !class_exists('SupPagesExpand' ) ) {
 			wp_enqueue_script( 'jquery' );
 			wp_enqueue_script( 'jquery-ui-core' );
 			wp_enqueue_script( 'jquery-ui-widget' );
+		}
+
+		function add_button_to_editor() {
+				wp_enqueue_script( 'add_button_editor'
+						, plugins_url( 'add_button_editor.js.php', __FILE__ )
+					, array()
+					, false
+					, true
+				);
 		}
 
 		/**

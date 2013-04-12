@@ -67,6 +67,8 @@ WordPress to load that page.
 
 == Changelog ==
 
+1.10 Added button to page editor
+
 1.09a Not all child page links were displaying. Added additional FAQs that came up.
 
 1.09 Fixed "Undefined variable: content" bug; cleaned up code
@@ -87,5 +89,5 @@ WordPress to load that page.
 
 == Upgrade Notice ==
 
-= 1.09a =
-Bugfix: not all of the child pages were displaying
+= 1.10  =
+Added button to page editor so you don't have to type in the code manually
