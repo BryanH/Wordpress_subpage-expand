@@ -67,7 +67,9 @@ WordPress to load that page.
 
 == Changelog ==
 
-1.10 Added button to page editor
+1.11 Button only appears on page editor now
+
+1.10 Added button to page editor * Added l10n support to button
 
 1.09a Not all child page links were displaying. Added additional FAQs that came up.
 
@@ -89,5 +91,5 @@ WordPress to load that page.
 
 == Upgrade Notice ==
 
-= 1.10  =
-Added button to page editor so you don't have to type in the code manually
+= 1.11 =
+Shortcode button now only appears on page editor (shortcode doesn't work on posts, so there's no reason to show it there).

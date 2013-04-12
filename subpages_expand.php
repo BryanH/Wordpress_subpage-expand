@@ -3,7 +3,7 @@
  * Plugin Name: Subpages as Expandible Links Shortcode
  * Plugin URI: http://hbjitney.com/subpages-expand.html
  * Description: Add [subpages_expand] to any page to embed all subpages as content-expandable links at that location.
- * Version: 1.10
+ * Version: 1.11
  * Author: HBJitney, LLC
  * Author URI: http://hbjitney.com/
  * License: GPL3
@@ -35,7 +35,7 @@ if ( !class_exists('SupPagesExpand' ) ) {
 		 */
 		function __construct() {
 			add_action( 'wp_enqueue_scripts', array( $this, 'shortcode_enqueue' ), 10 );
-			add_action( 'admin_head', array( $this, 'add_button_to_editor' ), 100 );
+			add_action( 'edit_page_form', array( $this, 'add_button_to_editor' ), 100 );
 			add_shortcode('subpages_expand', array( $this, 'render_subs' ) );
 			add_filter( 'the_posts', array( $this, 'conditionally_add_scripts_and_styles' ) ); // the_posts gets triggered before wp_head
 		}
@@ -46,6 +46,10 @@ if ( !class_exists('SupPagesExpand' ) ) {
 			wp_enqueue_script( 'jquery-ui-widget' );
 		}
 
+		/**
+		 * Added the button to the page editor only
+		 * (use action 'edit_page_form' to trigger)
+		 */
 		function add_button_to_editor() {
 				wp_enqueue_script(
 					'add_button_editor'				// handle
@@ -55,11 +59,15 @@ if ( !class_exists('SupPagesExpand' ) ) {
 					)								// source
 					, array(
 						'quicktags'
-						, 'jquery'
-					)		// depends on
+					)								// depends on
 					, '1.10'						// version
 					, true 							// in footer
 				);
+				$translations = array(
+					'button_title' => __( "Insert 'subpages expand' tag" )
+					, 'button_text' => __( "Subpages Expand" )
+					);
+				wp_localize_script( 'add_button_editor', 'texts', $translations );
 		}
 
 		/**
