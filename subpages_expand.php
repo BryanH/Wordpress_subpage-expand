@@ -35,7 +35,7 @@ if ( !class_exists('SupPagesExpand' ) ) {
 		 */
 		function __construct() {
 			add_action( 'wp_enqueue_scripts', array( $this, 'shortcode_enqueue' ), 10 );
-			add_action( 'admin_head', array( $this, 'add_button_to_editor' ), 10 );
+			add_action( 'admin_head', array( $this, 'add_button_to_editor' ), 100 );
 			add_shortcode('subpages_expand', array( $this, 'render_subs' ) );
 			add_filter( 'the_posts', array( $this, 'conditionally_add_scripts_and_styles' ) ); // the_posts gets triggered before wp_head
 		}
@@ -47,11 +47,18 @@ if ( !class_exists('SupPagesExpand' ) ) {
 		}
 
 		function add_button_to_editor() {
-				wp_enqueue_script( 'add_button_editor'
-						, plugins_url( 'add_button_editor.js.php', __FILE__ )
-					, array()
-					, false
-					, true
+				wp_enqueue_script(
+					'add_button_editor'				// handle
+					, plugins_url(
+						'js/add_button_editor.js.php'
+						, __FILE__
+					)								// source
+					, array(
+						'quicktags'
+						, 'jquery'
+					)		// depends on
+					, '1.10'						// version
+					, true 							// in footer
 				);
 		}
 
