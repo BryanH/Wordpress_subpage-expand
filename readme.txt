@@ -2,7 +2,7 @@
 Contributors: HBJitney LLC
 Tags: navigation, pages, jquery, effect, text, embedded content
 Requires at least: 3.4.1
-Tested up to: 3.5.1
+Tested up to: 4.3
 Stable tag: trunk
 License: GPLv3
 
