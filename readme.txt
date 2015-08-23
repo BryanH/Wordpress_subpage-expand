@@ -67,7 +67,7 @@ WordPress to load that page.
 
 == Changelog ==
 
-1.11 Button only appears on page editor now
+1.11 Button only appears on page editor now - tested up to 4.3
 
 1.10 Added button to page editor * Added l10n support to button
 
