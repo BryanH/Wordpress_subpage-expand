@@ -6,4 +6,4 @@
  */
 Header("content-type: text/javascript");
 ?>
-QTags.addButton('hbj_subpages',texts.button_text,'[subpages_expand]','','',texts.button_title);
+QTags.addButton( 'hbj-subpages', '', '[subpages_expand]',,, '<?php echo("Subpages expand tag"); ?>', 9999 );
