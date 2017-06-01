@@ -2,7 +2,7 @@
 Contributors: HBJitney LLC
 Tags: navigation, pages, jquery, effect, text, embedded content
 Requires at least: 3.4.1
-Tested up to: 4.6.1
+Tested up to: 4.8.0
 Stable tag: trunk
 License: GPLv3
 
@@ -65,8 +65,12 @@ WordPress to load that page.
 
 2. Public view showing each subpage's title with one expanded
 
+
+== Acknowledgements ==
+Plugin Icon (CC BY 3.0) by [DinosoftLabs](http://dinosoftlabs.com/)
+
 == Changelog ==
-1.15 Verified it works on WP 4.6.1
+1.15 Verified it works on WP 4.8.1
 
 1.13 Added support for WP 4.5
 
@@ -95,4 +99,4 @@ WordPress to load that page.
 == Upgrade Notice ==
 
 = 1.15 =
-Verified it works on WP 4.6.1
+Verified it works on WP 4.8.1
