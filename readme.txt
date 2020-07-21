@@ -2,7 +2,7 @@
 Contributors: HBJitney LLC
 Tags: navigation, pages, jquery, effect, text, embedded content
 Requires at least: 3.4.1
-Tested up to: 4.8.0
+Tested up to: 5.4.2
 Stable tag: trunk
 License: GPLv3
 
@@ -70,7 +70,9 @@ WordPress to load that page.
 Plugin Icon (CC BY 3.0) by [DinosoftLabs](http://dinosoftlabs.com/)
 
 == Changelog ==
-1.15 Verified it works on WP 4.8.1
+1.17 Verified it works on WP 4.8.0. Code cleanup.
+
+1.15 Verified it works on WP 4.6.1
 
 1.13 Added support for WP 4.5
 
@@ -98,5 +100,5 @@ Plugin Icon (CC BY 3.0) by [DinosoftLabs](http://dinosoftlabs.com/)
 
 == Upgrade Notice ==
 
-= 1.15 =
-Verified it works on WP 4.8.1
+= 1.19 =
+Verified it works on WP 5.4.2

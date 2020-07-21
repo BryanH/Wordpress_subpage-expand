@@ -3,7 +3,7 @@
  * Plugin Name: Subpages as Expandible Links Shortcode
  * Plugin URI: http://hbjitney.com/subpages-expand.html
  * Description: Add [subpages_expand] to any page to embed all subpages as content-expandable links at that location.
- * Version: 1.15
+ * Version: 1.19
  * Author: HBJitney, LLC
  * Author URI: http://hbjitney.com/
  * License: GPL3
@@ -113,27 +113,18 @@ if ( !class_exists('SupPagesExpand' ) ) {
 			foreach ( $children as $child ) {
 				// Render any shortcodes in child pages
 				$child_content = do_shortcode( $child->post_content );
-				$content .= "<h2 class='subpage_title' style='cursor:pointer'>$child->post_title</h2>
-<div class='subpage_content' style='display:none'>
-$child_content
-</div>";
+				$content .= "<h2 class='subpage_title' style='cursor:pointer'>$child->post_title</h2>";
+				$content .= "<div class='subpage_content' style='display:none'>$child_content</div>";
 			}
 
-// TODO - externalize and enqueue script
-			$content .= "<script type='text/javascript'>
-/*<![CDATA[*/
-jQuery( function(){
-			jQuery('.subpage_title').click(function() {
-				jQuery(this).next('.subpage_content').slideToggle(500);
-			});
-	});
-/*]]>*/
-</script>";
+			// TODO - externalize and enqueue script
+			$content .= "<script type='text/javascript'>/*<![CDATA[*/
+jQuery(function(){jQuery('.subpage_title').click(function(){jQuery(this).next('.subpage_content').slideToggle(500);});});
+/*]]>*/</script>";
 			return $content;
 		}
 	}
 }
-
 
 /*
  * Sanity - was there a problem setting up the class? If so, bail with error
