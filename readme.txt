@@ -3,7 +3,7 @@ Contributors: HBJitney LLC
 Tags: navigation, pages, jquery, effect, text, embedded content
 Requires at least: 3.4.1
 Tested up to: 6.7.2
-Stable tag: trunk
+Stable tag: 1.20
 License: GPLv3
 
 Add [subpages_expand] to any parent page. All child pages' titles are shown as links that expand to content when clicked
