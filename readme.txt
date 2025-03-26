@@ -1,8 +1,8 @@
-=== Subpage as Expandible Text Shortcode ===
+=== Subpage as Expandable Text Shortcode ===
 Contributors: HBJitney LLC
 Tags: navigation, pages, jquery, effect, text, embedded content
 Requires at least: 3.4.1
-Tested up to: 5.4.2
+Tested up to: 6.7.2
 Stable tag: trunk
 License: GPLv3
 
@@ -28,6 +28,14 @@ If you have a single file (ending in ".zip"), then use the *Upload* method. If y
 = Files =
 1. Upload the entire directory (not just the files) to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
+
+= Planned Enhancements =
+In no particular order
+
+* Option to display arrows next to titles to show if they are expanded or not (option to pick arrow type)
+* Option to display child page titles as links (will still expand when clicked)
+* Option to lazy-load subpages when clicked
+* Potentially move away from jQuery for performance
 
 == Frequently Asked Questions ==
 
@@ -70,6 +78,8 @@ WordPress to load that page.
 Plugin Icon (CC BY 3.0) by [DinosoftLabs](http://dinosoftlabs.com/)
 
 == Changelog ==
+1.19 Verified it works on WP 5.4.2
+
 1.17 Verified it works on WP 4.8.0. Code cleanup.
 
 1.15 Verified it works on WP 4.6.1
@@ -100,5 +110,5 @@ Plugin Icon (CC BY 3.0) by [DinosoftLabs](http://dinosoftlabs.com/)
 
 == Upgrade Notice ==
 
-= 1.19 =
-Verified it works on WP 5.4.2
+= 1.20 =
+Verified it works on WP 6.7.2; fixed embarrassing typo
