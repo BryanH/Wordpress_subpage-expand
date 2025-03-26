@@ -78,6 +78,8 @@ WordPress to load that page.
 Plugin Icon (CC BY 3.0) by [DinosoftLabs](http://dinosoftlabs.com/)
 
 == Changelog ==
+1.20 Verified it works on WP 6.7.2; fixed embarrassing typo
+
 1.19 Verified it works on WP 5.4.2
 
 1.17 Verified it works on WP 4.8.0. Code cleanup.
